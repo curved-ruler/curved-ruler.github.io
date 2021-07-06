@@ -30,11 +30,11 @@ repl_str += "</div><br /><br /><br /></div>\n"
 for i in range(len(pics)) :
     repl_str += "<div class='container' id ='" + folders[i][0] + "'><br /><br /><br />"
     repl_str += "<span class='h2'>" + folders[i][1] + "</span>"
-    repl_str += " <a href='#dark'>Up</a><br /><br /><br />\n"
+    repl_str += " <a href='#top'>Up</a><br /><br /><br />\n"
     for p in pics[i] :
         repl_str += "<div class='pic'><div class='picc'><a href='img/" + p + "'><img src='img/" + p + "' width='300' class='hm' /></a></div></div>\n"
     repl_str += "</div>\n"
 
-index_f = open("index.html", "w")
+index_f = open("s.html", "w")
 index_f.write(index_str.replace("$$$$", repl_str))
 index_f.close()
