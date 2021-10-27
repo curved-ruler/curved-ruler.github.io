@@ -142,7 +142,7 @@ let render = function ()
     
     rendered = "";
     
-    render_text(1,cy-1,-1,"Usage:\n======\nArrow keys - rotate\nx/- keys   - zoom");
+    render_text(1,cy-1,-1,"Usage:\n======\nArrow keys - rotate\n+/- keys   - zoom");
     
     for (let vi = 0 ; vi < tr_m_v.length ; ++vi)
     {
