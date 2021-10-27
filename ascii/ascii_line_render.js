@@ -95,6 +95,7 @@ let render_begin = function ()
 {
     charmap  = [];
     depthmap = [];
+    
     for (let y = cy-1 ; y>=0 ; --y)
     {
         for (let x = 0 ; x<cx ; ++x)
@@ -115,6 +116,23 @@ let render_point = function (x, y, z, shade)
         }
     }
 };
+let render_text = function (x, y, z, str)
+{
+    let xi = x;
+    let yi = y;
+    for (let i = 0 ; i<str.length ; ++i)
+    {
+        let ch = str.charAt(i);
+        if (ch == '\n')
+        {
+            --yi;
+            xi = x;
+            continue;
+        }
+        render_point(xi, yi, z, ch);
+        ++xi;
+    }
+}
 let render = function ()
 {
     if (!mesh) return;
@@ -123,6 +141,8 @@ let render = function ()
     compute_matrices();
     
     rendered = "";
+    
+    render_text(1,cy-1,-1,"Usage:\n======\nArrow keys - rotate\nx/- keys   - zoom");
     
     for (let vi = 0 ; vi < tr_m_v.length ; ++vi)
     {
@@ -203,8 +223,6 @@ var init = function ()
     
     rendered_html  = document.getElementById('canvas');
     canvcont_html  = document.getElementById('canvcont');
-    
-    window.alert("Usage: \n\nArrow keys - rotate\n+/- keys - zoom");
     
     resize();
     render_begin();
