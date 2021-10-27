@@ -204,7 +204,7 @@ var init = function ()
     rendered_html  = document.getElementById('canvas');
     canvcont_html  = document.getElementById('canvcont');
     
-    window.alert("Usage: \n\nCursors - rotate\n+/- - zoom");
+    window.alert("Usage: \n\nArrow keys - rotate\n+/- keys - zoom");
     
     resize();
     render_begin();
