@@ -74,7 +74,7 @@ let make_path = function ()
 };
 let update_path = function ()
 {
-    for (let i=1 ; i<pathlen ; ++i)
+    for (let i=pathlen-1 ; i>0 ; --i)
     {
         path[i*3]     = path[(i-1)*3];
         path[i*3 + 1] = path[(i-1)*3 + 1];
