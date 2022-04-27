@@ -1,4 +1,8 @@
 ﻿
+.hidden {
+  display: none;
+}
+
 body#top {
 
   position: absolute;
