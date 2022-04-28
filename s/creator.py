@@ -15,6 +15,7 @@ pics = []
 
 for f in folders :
     list = os.listdir("img/" + f[0])
+    list.sort()
     for i in range(len(list)) :
         list[i] = f[0] + "/" + list[i]
     pics.append(list)
