@@ -190,12 +190,11 @@ table.innertable {
   width: 100%;
 }
 
-td.head {
-  background-color: rgb(40,40,40);
-}
-
 td.textleft {
   text-align: left;
+}
+td.last {
+  padding-top: 80px;
 }
 
 
@@ -205,6 +204,6 @@ img.link {
 
 a:link    { color: rgb(150,150,150); }
 a:visited { color: rgb(150,150,150); }
-a:hover {}
-a:active {}
+a:hover   {}
+a:active  {}
 
