@@ -1,0 +1,3 @@
+[submodule "webgl-sketches"]
+	path = webgl-sketches
+	url = https://github.com/curved-ruler/webgl-sketches

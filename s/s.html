@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+
+
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <!-- meta http-equiv="pragma" content="no-cache" / -->
+    <link rel="stylesheet" type="text/css" href="../style.css"/>
+    <title>Gorbevonalzo</title>
+  </head>
+  <body id="top" class="back">
+    <div class="header">
+      <!-- span><img src="gv500_2.png" /></span -->
+      <span class="h">Görbevonalzó</span> a k a <span class="h">Curved-ruler</span>
+      <br /><br />
+    </div>
+    
+    <div class='container'><br /><br /><span class='h2'>ToC</span><br /><br /><div class='links'>
+<a href='#objector'>3d objects and perspectives</a><br/>
+<a href='#eq'>Equation plotter</a><br/>
+<a href='#eq_frac'>Fractals</a><br/>
+<a href='#midpoints'>Midpoints</a><br/>
+<a href='#spiro3'>3d spirograph</a><br/>
+<a href='#sphere4d'>4d rotating sphere</a><br/>
+<a href='#parametric'>Parametric surfaces</a><br/>
+<a href='#times'>Times</a><br/>
+<a href='#voronoi'>Voronoi</a><br/>
+<a href='#bugs'>Bugs</a><br/>
+<a href='#pascal'>Pascal / 2d cellular automata</a><br/>
+<a href='#chaosg'>Modified chaos game</a><br/>
+<a href='#cycloid'>Cycloid drawing machine</a><br/>
+<a href='#plane_tr'>Planar transformations</a><br/>
+<a href='#dandelion'>Dandelion</a><br/>
+<a href='#spiral'>Turtle graphics</a><br/>
+<a href='#tri'>Delaunay triangulation</a><br/>
+<a href='#trochoid'>Trochoid</a><br/>
+<a href='#grid'>Grid</a><br/>
+<a href='#terrain'>Terrain</a><br/>
+<a href='#planets'>Planets</a><br/>
+<a href='#newworld'>Game skeleton</a><br/>
+</div><br /><br /><br /></div>
+<div class='container' id ='objector'><br /><br /><br /><span class='h2'>3d objects and perspectives</span> <a href='#top'>Up</a><br /><br /><br />
+<div class='desc'>Ways of displaying 3D objects in 2D. Axonometry, Perspective, 6 point perspective (or 360° fisheye): (x,y,z)=>(a,b)             And there is cyclography, too. Try: <a href='../webgl-sketches/objector/objector.html'>Objector</a></div><div class='pic'><div class='picc'><a href='img/objector/01_axon.png'><img src='img/objector/01_axon.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/objector/02_persp.png'><img src='img/objector/02_persp.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/objector/03_pp6.png'><img src='img/objector/03_pp6.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/objector/04_cikl.png'><img src='img/objector/04_cikl.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/objector/c_cube_2b.png'><img src='img/objector/c_cube_2b.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/objector/c_cube_3.png'><img src='img/objector/c_cube_3.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/objector/cessna1.png'><img src='img/objector/cessna1.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/objector/cessna2.png'><img src='img/objector/cessna2.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/objector/cikl_cube.png'><img src='img/objector/cikl_cube.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/objector/cikl_octa.png'><img src='img/objector/cikl_octa.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/objector/cszil5.png'><img src='img/objector/cszil5.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/objector/h01.png'><img src='img/objector/h01.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/objector/h03.png'><img src='img/objector/h03.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/objector/h04.png'><img src='img/objector/h04.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/objector/hdod.png'><img src='img/objector/hdod.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/objector/hdodekaeder.png'><img src='img/objector/hdodekaeder.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/objector/hikozaeder.png'><img src='img/objector/hikozaeder.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/objector/icosa.png'><img src='img/objector/icosa.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/objector/o_dobokocka01.png'><img src='img/objector/o_dobokocka01.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/objector/o_fulleren01.png'><img src='img/objector/o_fulleren01.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/objector/o_kocka01.png'><img src='img/objector/o_kocka01.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/objector/o_kor01.png'><img src='img/objector/o_kor01.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/objector/o_stairs02.png'><img src='img/objector/o_stairs02.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/objector/o_stairs03.png'><img src='img/objector/o_stairs03.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/objector/o_star01.png'><img src='img/objector/o_star01.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/objector/o_star02.png'><img src='img/objector/o_star02.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/objector/pp6_fulleren.gif'><img src='img/objector/pp6_fulleren.gif' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/objector/pp6_kor2.gif'><img src='img/objector/pp6_kor2.gif' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/objector/pp6_lepcso.png'><img src='img/objector/pp6_lepcso.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/objector/sq0.png'><img src='img/objector/sq0.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/objector/sq1.png'><img src='img/objector/sq1.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/objector/sq2.png'><img src='img/objector/sq2.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/objector/sq3.png'><img src='img/objector/sq3.png' width='300' class='hm' /></a></div></div>
+</div>
+<div class='container' id ='eq'><br /><br /><br /><span class='h2'>Equation plotter</span> <a href='#top'>Up</a><br /><br /><br />
+<div class='desc'>Started as an equation plotter, now is a 2d playground. Try: <a href='../webgl-sketches/eq/eq.html'>Eq plotter</a></div><div class='pic'><div class='picc'><a href='img/eq/eq_bit_17.png'><img src='img/eq/eq_bit_17.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/eq/eq_bit_9.png'><img src='img/eq/eq_bit_9.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/eq/eq_bit_si1.png'><img src='img/eq/eq_bit_si1.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/eq/eq_bit_si3.png'><img src='img/eq/eq_bit_si3.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/eq/eq_bit_x.png'><img src='img/eq/eq_bit_x.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/eq/eq_circle_moire.png'><img src='img/eq/eq_circle_moire.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/eq/eq_circle_moire_b.png'><img src='img/eq/eq_circle_moire_b.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/eq/eq_noise_expsin_02d.png'><img src='img/eq/eq_noise_expsin_02d.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/eq/eq_plotter_0001first.png'><img src='img/eq/eq_plotter_0001first.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/eq/eq_plotter_0002second.png'><img src='img/eq/eq_plotter_0002second.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/eq/eq_plotter_02.png'><img src='img/eq/eq_plotter_02.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/eq/eq_plotter_03.png'><img src='img/eq/eq_plotter_03.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/eq/eq_plotter_04.png'><img src='img/eq/eq_plotter_04.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/eq/eq_plotter_05.png'><img src='img/eq/eq_plotter_05.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/eq/eq_plotter_06.png'><img src='img/eq/eq_plotter_06.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/eq/eq_plotter_07.png'><img src='img/eq/eq_plotter_07.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/eq/eq_plotter_comp1.png'><img src='img/eq/eq_plotter_comp1.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/eq/eq_plotter_comp1b.png'><img src='img/eq/eq_plotter_comp1b.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/eq/eq_plotter_comp2.png'><img src='img/eq/eq_plotter_comp2.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/eq/sinquad.png'><img src='img/eq/sinquad.png' width='300' class='hm' /></a></div></div>
+</div>
+<div class='container' id ='eq_frac'><br /><br /><br /><span class='h2'>Fractals</span> <a href='#top'>Up</a><br /><br /><br />
+<div class='desc'>Fractals created with the above playground. For easier Julia program try: <a href='../julia/julia2.html'>Juila</a></div><div class='pic'><div class='picc'><a href='img/eq_frac/J.png'><img src='img/eq_frac/J.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/eq_frac/JE-01.png'><img src='img/eq_frac/JE-01.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/eq_frac/JE-02.png'><img src='img/eq_frac/JE-02.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/eq_frac/JE-03.png'><img src='img/eq_frac/JE-03.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/eq_frac/JE-04.png'><img src='img/eq_frac/JE-04.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/eq_frac/julia.png'><img src='img/eq_frac/julia.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/eq_frac/julia02.png'><img src='img/eq_frac/julia02.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/eq_frac/julia03.png'><img src='img/eq_frac/julia03.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/eq_frac/julia04.png'><img src='img/eq_frac/julia04.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/eq_frac/julia05.png'><img src='img/eq_frac/julia05.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/eq_frac/julia2.png'><img src='img/eq_frac/julia2.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/eq_frac/julia3.png'><img src='img/eq_frac/julia3.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/eq_frac/julia4.png'><img src='img/eq_frac/julia4.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/eq_frac/julia5.png'><img src='img/eq_frac/julia5.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/eq_frac/nr-dot.png'><img src='img/eq_frac/nr-dot.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/eq_frac/nrd01.png'><img src='img/eq_frac/nrd01.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/eq_frac/nrd02.png'><img src='img/eq_frac/nrd02.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/eq_frac/nrd03.png'><img src='img/eq_frac/nrd03.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/eq_frac/nrd04.png'><img src='img/eq_frac/nrd04.png' width='300' class='hm' /></a></div></div>
+</div>
+<div class='container' id ='midpoints'><br /><br /><br /><span class='h2'>Midpoints</span> <a href='#top'>Up</a><br /><br /><br />
+<div class='desc'>Takes a curve a plane, creates unordered pairs of all points in the curve, and new point location is the midpoint,             elevation is the distance. <a href='../webgl-sketches/midpoints/gorbincs-felho.html'>Midpoints</a></div><div class='pic'><div class='picc'><a href='img/midpoints/g0002.png'><img src='img/midpoints/g0002.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/midpoints/g0004a.png'><img src='img/midpoints/g0004a.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/midpoints/g0004b.png'><img src='img/midpoints/g0004b.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/midpoints/g0005.png'><img src='img/midpoints/g0005.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/midpoints/g0006.png'><img src='img/midpoints/g0006.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/midpoints/g0007.png'><img src='img/midpoints/g0007.png' width='300' class='hm' /></a></div></div>
+</div>
+<div class='container' id ='spiro3'><br /><br /><br /><span class='h2'>3d spirograph</span> <a href='#top'>Up</a><br /><br /><br />
+<div class='desc'>Sphere rolls on sphere <a href='../webgl-sketches/spiro3/spiro3.html'>Spiro3</a></div><div class='pic'><div class='picc'><a href='img/spiro3/blend_imp_spiro3.png'><img src='img/spiro3/blend_imp_spiro3.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/spiro3/sp3_4.png'><img src='img/spiro3/sp3_4.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/spiro3/sp3_4b.png'><img src='img/spiro3/sp3_4b.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/spiro3/sp3_gear.png'><img src='img/spiro3/sp3_gear.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/spiro3/sp3_gear_03a.png'><img src='img/spiro3/sp3_gear_03a.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/spiro3/sp3_gear_03b.png'><img src='img/spiro3/sp3_gear_03b.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/spiro3/sp3_gear_04.png'><img src='img/spiro3/sp3_gear_04.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/spiro3/sp_n_3.png'><img src='img/spiro3/sp_n_3.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/spiro3/spiro3_005.png'><img src='img/spiro3/spiro3_005.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/spiro3/spiro3_006.png'><img src='img/spiro3/spiro3_006.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/spiro3/spiro3_007.png'><img src='img/spiro3/spiro3_007.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/spiro3/spiro3_008.png'><img src='img/spiro3/spiro3_008.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/spiro3/spiro3_x.png'><img src='img/spiro3/spiro3_x.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/spiro3/spiro3_y.png'><img src='img/spiro3/spiro3_y.png' width='300' class='hm' /></a></div></div>
+</div>
+<div class='container' id ='sphere4d'><br /><br /><br /><span class='h2'>4d rotating sphere</span> <a href='#top'>Up</a><br /><br /><br />
+<div class='desc'>This <a href='https://mathcatalog.tumblr.com/post/89572389754/xysciences-projection-of-a-double-spiral-on-a'>gif</a>             is around for a while: stereographic projection of a spiral on a sphere. I had an idea to step up a dimension,             4d hypersphere projected onto 3d space. Obviously I don't see in 4d, and could made mistakes,             but this program is the result. Try: <a href='../webgl-sketches/sphere4d/sphere4d.html'>Sphere in 4D</a></div><div class='pic'><div class='picc'><a href='img/sphere4d/000.gif'><img src='img/sphere4d/000.gif' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/sphere4d/b04.png'><img src='img/sphere4d/b04.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/sphere4d/b05.png'><img src='img/sphere4d/b05.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/sphere4d/b06.png'><img src='img/sphere4d/b06.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/sphere4d/c01.png'><img src='img/sphere4d/c01.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/sphere4d/c02.png'><img src='img/sphere4d/c02.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/sphere4d/c03.png'><img src='img/sphere4d/c03.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/sphere4d/c04.png'><img src='img/sphere4d/c04.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/sphere4d/c05.png'><img src='img/sphere4d/c05.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/sphere4d/c06.png'><img src='img/sphere4d/c06.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/sphere4d/c07.png'><img src='img/sphere4d/c07.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/sphere4d/c08.png'><img src='img/sphere4d/c08.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/sphere4d/c09.png'><img src='img/sphere4d/c09.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/sphere4d/c10.png'><img src='img/sphere4d/c10.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/sphere4d/c11.png'><img src='img/sphere4d/c11.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/sphere4d/c12.png'><img src='img/sphere4d/c12.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/sphere4d/c14.png'><img src='img/sphere4d/c14.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/sphere4d/c16.png'><img src='img/sphere4d/c16.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/sphere4d/c17.png'><img src='img/sphere4d/c17.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/sphere4d/c18.png'><img src='img/sphere4d/c18.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/sphere4d/s4.png'><img src='img/sphere4d/s4.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/sphere4d/s4_002.png'><img src='img/sphere4d/s4_002.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/sphere4d/s4_2.png'><img src='img/sphere4d/s4_2.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/sphere4d/sph4_new.png'><img src='img/sphere4d/sph4_new.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/sphere4d/sph4_new_min.png'><img src='img/sphere4d/sph4_new_min.png' width='300' class='hm' /></a></div></div>
+</div>
+<div class='container' id ='parametric'><br /><br /><br /><span class='h2'>Parametric surfaces</span> <a href='#top'>Up</a><br /><br /><br />
+<div class='desc'>(u,v)=>(x,y,z) Try: <a href='../webgl-sketches/parametric/parametric.html'>Parametric surfaces</a></div><div class='pic'><div class='picc'><a href='img/parametric/Screenshot from 2023-05-27 23-19-55.png'><img src='img/parametric/Screenshot from 2023-05-27 23-19-55.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/parametric/clifford_inside.png'><img src='img/parametric/clifford_inside.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/parametric/p005.png'><img src='img/parametric/p005.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/parametric/p006.png'><img src='img/parametric/p006.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/parametric/par_txt001.png'><img src='img/parametric/par_txt001.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/parametric/par_txt001b.png'><img src='img/parametric/par_txt001b.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/parametric/par_txt002.png'><img src='img/parametric/par_txt002.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/parametric/par_txt003.png'><img src='img/parametric/par_txt003.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/parametric/par_txt004.png'><img src='img/parametric/par_txt004.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/parametric/par_txt004b.png'><img src='img/parametric/par_txt004b.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/parametric/parametric0d.png'><img src='img/parametric/parametric0d.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/parametric/parametric_001.png'><img src='img/parametric/parametric_001.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/parametric/parametric_001_p.png'><img src='img/parametric/parametric_001_p.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/parametric/parametric_002.png'><img src='img/parametric/parametric_002.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/parametric/parametric_002_p.png'><img src='img/parametric/parametric_002_p.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/parametric/parametric_003.png'><img src='img/parametric/parametric_003.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/parametric/parametric_003_p.png'><img src='img/parametric/parametric_003_p.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/parametric/parheh.png'><img src='img/parametric/parheh.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/parametric/parheh2.png'><img src='img/parametric/parheh2.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/parametric/partree_b.png'><img src='img/parametric/partree_b.png' width='300' class='hm' /></a></div></div>
+</div>
+<div class='container' id ='times'><br /><br /><br /><span class='h2'>Times</span> <a href='#top'>Up</a><br /><br /><br />
+<div class='desc'>Times diagram described in a Mathologer video <a href='https://www.youtube.com/watch?v=qhbuKbxJsk8'>here</a>             Try: <a href='../webgl-sketches/times/times.html'>Times</a></div><div class='pic'><div class='picc'><a href='img/times/t_435_61431.png'><img src='img/times/t_435_61431.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/times/t_4_10082.png'><img src='img/times/t_4_10082.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/times/t_68_99989.png'><img src='img/times/t_68_99989.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/times/t_69_99994.png'><img src='img/times/t_69_99994.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/times/t_69_99994_b.png'><img src='img/times/t_69_99994_b.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/times/tf_161_800.png'><img src='img/times/tf_161_800.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/times/tf_201_800.png'><img src='img/times/tf_201_800.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/times/tf_321_800.png'><img src='img/times/tf_321_800.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/times/tf_381_800.png'><img src='img/times/tf_381_800.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/times/tf_425_5041.png'><img src='img/times/tf_425_5041.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/times/tf_446_801.png'><img src='img/times/tf_446_801.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/times/times_02_bw.png'><img src='img/times/times_02_bw.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/times/times_3122_5041.png'><img src='img/times/times_3122_5041.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/times/times_4332_40319.png'><img src='img/times/times_4332_40319.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/times/times_4360_40319.png'><img src='img/times/times_4360_40319.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/times/times_4442_40319.png'><img src='img/times/times_4442_40319.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/times/times_4509_40319.png'><img src='img/times/times_4509_40319.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/times/times_b.png'><img src='img/times/times_b.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/times/times_c.png'><img src='img/times/times_c.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/times/times_circ_bug_1.png'><img src='img/times/times_circ_bug_1.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/times/times_circ_bug_ok.png'><img src='img/times/times_circ_bug_ok.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/times/times_d.png'><img src='img/times/times_d.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/times/times_d_bw.png'><img src='img/times/times_d_bw.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/times/times_x3131_m5009.png'><img src='img/times/times_x3131_m5009.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/times/timesflipped_a.png'><img src='img/times/timesflipped_a.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/times/timesflipped_b.png'><img src='img/times/timesflipped_b.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/times/timesflipped_c.png'><img src='img/times/timesflipped_c.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/times/timesflipped_d.png'><img src='img/times/timesflipped_d.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/times/timesflipped_e.png'><img src='img/times/timesflipped_e.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/times/timesflipped_f.png'><img src='img/times/timesflipped_f.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/times/timesflipped_g.png'><img src='img/times/timesflipped_g.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/times/timesflipped_h.png'><img src='img/times/timesflipped_h.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/times/timesflipped_i.png'><img src='img/times/timesflipped_i.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/times/timesflipped_j.png'><img src='img/times/timesflipped_j.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/times/timesflipped_k.png'><img src='img/times/timesflipped_k.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/times/timesflipped_l.png'><img src='img/times/timesflipped_l.png' width='300' class='hm' /></a></div></div>
+</div>
+<div class='container' id ='voronoi'><br /><br /><br /><span class='h2'>Voronoi</span> <a href='#top'>Up</a><br /><br /><br />
+<div class='desc'>Voronoi diagram with interactive distance function. Try: <a href='../webgl-sketches/voronoi2/voronoi2.html'>Voronoi</a></div><div class='pic'><div class='picc'><a href='img/voronoi/001.png'><img src='img/voronoi/001.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/voronoi/a001.png'><img src='img/voronoi/a001.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/voronoi/a002.png'><img src='img/voronoi/a002.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/voronoi/a003.png'><img src='img/voronoi/a003.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/voronoi/a04.png'><img src='img/voronoi/a04.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/voronoi/a07.png'><img src='img/voronoi/a07.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/voronoi/a10.png'><img src='img/voronoi/a10.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/voronoi/a12.png'><img src='img/voronoi/a12.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/voronoi/a25_2.png'><img src='img/voronoi/a25_2.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/voronoi/a25_3.png'><img src='img/voronoi/a25_3.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/voronoi/a25_4.png'><img src='img/voronoi/a25_4.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/voronoi/sin01.png'><img src='img/voronoi/sin01.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/voronoi/v01.png'><img src='img/voronoi/v01.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/voronoi/v02.png'><img src='img/voronoi/v02.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/voronoi/v03.png'><img src='img/voronoi/v03.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/voronoi/v04.png'><img src='img/voronoi/v04.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/voronoi/v05.png'><img src='img/voronoi/v05.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/voronoi/v06.png'><img src='img/voronoi/v06.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/voronoi/v07.png'><img src='img/voronoi/v07.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/voronoi/v08.png'><img src='img/voronoi/v08.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/voronoi/v09.png'><img src='img/voronoi/v09.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/voronoi/v10.png'><img src='img/voronoi/v10.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/voronoi/v11.png'><img src='img/voronoi/v11.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/voronoi/v20.png'><img src='img/voronoi/v20.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/voronoi/v21.png'><img src='img/voronoi/v21.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/voronoi/v22.png'><img src='img/voronoi/v22.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/voronoi/v23.png'><img src='img/voronoi/v23.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/voronoi/v24.png'><img src='img/voronoi/v24.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/voronoi/v25.png'><img src='img/voronoi/v25.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/voronoi/v26.png'><img src='img/voronoi/v26.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/voronoi/verr01.png'><img src='img/voronoi/verr01.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/voronoi/vx.png'><img src='img/voronoi/vx.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/voronoi/vx1.png'><img src='img/voronoi/vx1.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/voronoi/vx2.png'><img src='img/voronoi/vx2.png' width='300' class='hm' /></a></div></div>
+</div>
+<div class='container' id ='bugs'><br /><br /><br /><span class='h2'>Bugs</span> <a href='#top'>Up</a><br /><br /><br />
+<div class='desc'>Bugs following each other. 1st -> 2nd, 2nd -> 3rd ... Nth -> 1st             Try: <a href='../webgl-sketches/bugs/bugs.html'>Bugs</a></div><div class='pic'><div class='picc'><a href='img/bugs/bugs01.png'><img src='img/bugs/bugs01.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/bugs/bugs02.png'><img src='img/bugs/bugs02.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/bugs/bugs_-1.png'><img src='img/bugs/bugs_-1.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/bugs/bugs_2.01.png'><img src='img/bugs/bugs_2.01.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/bugs/bugs_2.5.png'><img src='img/bugs/bugs_2.5.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/bugs/bugs_2.5_b.png'><img src='img/bugs/bugs_2.5_b.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/bugs/bugs_sraff.png'><img src='img/bugs/bugs_sraff.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/bugs/bugs_toomuch_2.png'><img src='img/bugs/bugs_toomuch_2.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/bugs/bugs_toomuch_3.png'><img src='img/bugs/bugs_toomuch_3.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/bugs/bugs_toomuch_4.png'><img src='img/bugs/bugs_toomuch_4.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/bugs/bugs_x.png'><img src='img/bugs/bugs_x.png' width='300' class='hm' /></a></div></div>
+</div>
+<div class='container' id ='pascal'><br /><br /><br /><span class='h2'>Pascal / 2d cellular automata</span> <a href='#top'>Up</a><br /><br /><br />
+<div class='desc'></div><div class='pic'><div class='picc'><a href='img/pascal/g01.png'><img src='img/pascal/g01.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/pascal/g02.png'><img src='img/pascal/g02.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/pascal/g11.png'><img src='img/pascal/g11.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/pascal/g14.png'><img src='img/pascal/g14.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/pascal/g15.png'><img src='img/pascal/g15.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/pascal/g16.png'><img src='img/pascal/g16.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/pascal/g17.png'><img src='img/pascal/g17.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/pascal/p000.png'><img src='img/pascal/p000.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/pascal/p001.png'><img src='img/pascal/p001.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/pascal/p001_err.png'><img src='img/pascal/p001_err.png' width='300' class='hm' /></a></div></div>
+</div>
+<div class='container' id ='chaosg'><br /><br /><br /><span class='h2'>Modified chaos game</span> <a href='#top'>Up</a><br /><br /><br />
+<div class='desc'></div><div class='pic'><div class='picc'><a href='img/chaosg/cg-x-00.png'><img src='img/chaosg/cg-x-00.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/chaosg/cg-x-01.png'><img src='img/chaosg/cg-x-01.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/chaosg/cg-x-02.png'><img src='img/chaosg/cg-x-02.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/chaosg/cg-x-03.png'><img src='img/chaosg/cg-x-03.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/chaosg/cg-x-04.png'><img src='img/chaosg/cg-x-04.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/chaosg/cg01x.png'><img src='img/chaosg/cg01x.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/chaosg/cg04.png'><img src='img/chaosg/cg04.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/chaosg/cg_rnddiv01.png'><img src='img/chaosg/cg_rnddiv01.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/chaosg/cg_rnddiv03.png'><img src='img/chaosg/cg_rnddiv03.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/chaosg/cg_rnddiv04.png'><img src='img/chaosg/cg_rnddiv04.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/chaosg/chaosgame5a.png'><img src='img/chaosg/chaosgame5a.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/chaosg/chaosgame6a.png'><img src='img/chaosg/chaosgame6a.png' width='300' class='hm' /></a></div></div>
+</div>
+<div class='container' id ='cycloid'><br /><br /><br /><span class='h2'>Cycloid drawing machine</span> <a href='#top'>Up</a><br /><br /><br />
+<div class='desc'>Based on the cycloid drawing machine by Joe Freedman</div><div class='pic'><div class='picc'><a href='img/cycloid/cyc_bdatzrd_000.png'><img src='img/cycloid/cyc_bdatzrd_000.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/cycloid/cyc_bdatzrd_001.png'><img src='img/cycloid/cyc_bdatzrd_001.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/cycloid/cyc_bdatzrd_002.png'><img src='img/cycloid/cyc_bdatzrd_002.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/cycloid/cyc_bdatzrd_004.png'><img src='img/cycloid/cyc_bdatzrd_004.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/cycloid/cyc_grtkwcd_000.png'><img src='img/cycloid/cyc_grtkwcd_000.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/cycloid/cyc_xpfwiyl_000.png'><img src='img/cycloid/cyc_xpfwiyl_000.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/cycloid/cyc_yywargu_000.png'><img src='img/cycloid/cyc_yywargu_000.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/cycloid/cycloid_swp.png'><img src='img/cycloid/cycloid_swp.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/cycloid/orb_kvplgdt_000.png'><img src='img/cycloid/orb_kvplgdt_000.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/cycloid/orb_wtzteqe_000.png'><img src='img/cycloid/orb_wtzteqe_000.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/cycloid/orb_wtzteqe_001.png'><img src='img/cycloid/orb_wtzteqe_001.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/cycloid/orb_wtzteqe_002.png'><img src='img/cycloid/orb_wtzteqe_002.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/cycloid/orb_wtzteqe_003.png'><img src='img/cycloid/orb_wtzteqe_003.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/cycloid/orb_wtzteqe_004.png'><img src='img/cycloid/orb_wtzteqe_004.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/cycloid/orb_wtzz.png'><img src='img/cycloid/orb_wtzz.png' width='300' class='hm' /></a></div></div>
+</div>
+<div class='container' id ='plane_tr'><br /><br /><br /><span class='h2'>Planar transformations</span> <a href='#top'>Up</a><br /><br /><br />
+<div class='desc'></div><div class='pic'><div class='picc'><a href='img/plane_tr/b.png'><img src='img/plane_tr/b.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/plane_tr/bb.png'><img src='img/plane_tr/bb.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/plane_tr/n_2.png'><img src='img/plane_tr/n_2.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/plane_tr/n_4.png'><img src='img/plane_tr/n_4.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/plane_tr/n_5.png'><img src='img/plane_tr/n_5.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/plane_tr/plt_aanqopx_000.png'><img src='img/plane_tr/plt_aanqopx_000.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/plane_tr/plt_caegchb_000.png'><img src='img/plane_tr/plt_caegchb_000.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/plane_tr/plt_eokfyew_000.png'><img src='img/plane_tr/plt_eokfyew_000.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/plane_tr/plt_hlhsjpu_000.png'><img src='img/plane_tr/plt_hlhsjpu_000.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/plane_tr/plt_ikxnyti_000.png'><img src='img/plane_tr/plt_ikxnyti_000.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/plane_tr/plt_kotybek_000.png'><img src='img/plane_tr/plt_kotybek_000.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/plane_tr/plt_kotybek_001.png'><img src='img/plane_tr/plt_kotybek_001.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/plane_tr/plt_mlroynx_000.png'><img src='img/plane_tr/plt_mlroynx_000.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/plane_tr/plt_mlroynx_001.png'><img src='img/plane_tr/plt_mlroynx_001.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/plane_tr/plt_mlroynx_002.png'><img src='img/plane_tr/plt_mlroynx_002.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/plane_tr/plt_ouqvrra_000.png'><img src='img/plane_tr/plt_ouqvrra_000.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/plane_tr/plt_rtqcqxs_000.png'><img src='img/plane_tr/plt_rtqcqxs_000.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/plane_tr/plt_rweadmn_000.png'><img src='img/plane_tr/plt_rweadmn_000.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/plane_tr/plt_sbrknki_000.png'><img src='img/plane_tr/plt_sbrknki_000.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/plane_tr/plt_vzbyfhl_000.png'><img src='img/plane_tr/plt_vzbyfhl_000.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/plane_tr/plt_ygsfnsb_000.png'><img src='img/plane_tr/plt_ygsfnsb_000.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/plane_tr/plt_yqboktm_000.png'><img src='img/plane_tr/plt_yqboktm_000.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/plane_tr/plt_yqboktm_001.png'><img src='img/plane_tr/plt_yqboktm_001.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/plane_tr/plt_zjaerut_001.png'><img src='img/plane_tr/plt_zjaerut_001.png' width='300' class='hm' /></a></div></div>
+</div>
+<div class='container' id ='dandelion'><br /><br /><br /><span class='h2'>Dandelion</span> <a href='#top'>Up</a><br /><br /><br />
+<div class='desc'>Images recreated from a basic program in a 1984 Hungarian book 'Etűdök ​személyi számítógépekre'</div><div class='pic'><div class='picc'><a href='img/dandelion/d0.png'><img src='img/dandelion/d0.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/dandelion/d1.png'><img src='img/dandelion/d1.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/dandelion/d2.png'><img src='img/dandelion/d2.png' width='300' class='hm' /></a></div></div>
+</div>
+<div class='container' id ='spiral'><br /><br /><br /><span class='h2'>Turtle graphics</span> <a href='#top'>Up</a><br /><br /><br />
+<div class='desc'></div><div class='pic'><div class='picc'><a href='img/spiral/spiral_20.5_290.55_3.png'><img src='img/spiral/spiral_20.5_290.55_3.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/spiral/spiral_20.5_290.55_4.png'><img src='img/spiral/spiral_20.5_290.55_4.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/spiral/spiral_20.5_290.5_1.png'><img src='img/spiral/spiral_20.5_290.5_1.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/spiral/spiral_20.77_290.9_1.png'><img src='img/spiral/spiral_20.77_290.9_1.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/spiral/spiral_20_290__17_a.png'><img src='img/spiral/spiral_20_290__17_a.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/spiral/spiral_45_210_a.png'><img src='img/spiral/spiral_45_210_a.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/spiral/spiral_45_210_b.png'><img src='img/spiral/spiral_45_210_b.png' width='300' class='hm' /></a></div></div>
+</div>
+<div class='container' id ='tri'><br /><br /><br /><span class='h2'>Delaunay triangulation</span> <a href='#top'>Up</a><br /><br /><br />
+<div class='desc'></div><div class='pic'><div class='picc'><a href='img/tri/circ-plt_osyabri_000.png'><img src='img/tri/circ-plt_osyabri_000.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/tri/circ-plt_rrevgis_000.png'><img src='img/tri/circ-plt_rrevgis_000.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/tri/circ-plt_ttbaafp_000.png'><img src='img/tri/circ-plt_ttbaafp_000.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/tri/del_hhmicwp_000.png'><img src='img/tri/del_hhmicwp_000.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/tri/plt_hxqyyxq_000.png'><img src='img/tri/plt_hxqyyxq_000.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/tri/plt_mrdomxg_000.png'><img src='img/tri/plt_mrdomxg_000.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/tri/plt_sgdxhxd_000.png'><img src='img/tri/plt_sgdxhxd_000.png' width='300' class='hm' /></a></div></div>
+</div>
+<div class='container' id ='trochoid'><br /><br /><br /><span class='h2'>Trochoid</span> <a href='#top'>Up</a><br /><br /><br />
+<div class='desc'></div><div class='pic'><div class='picc'><a href='img/trochoid/trochoid.gif'><img src='img/trochoid/trochoid.gif' width='300' class='hm' /></a></div></div>
+</div>
+<div class='container' id ='grid'><br /><br /><br /><span class='h2'>Grid</span> <a href='#top'>Up</a><br /><br /><br />
+<div class='desc'></div><div class='pic'><div class='picc'><a href='img/grid/tt_arwpglw_000.png'><img src='img/grid/tt_arwpglw_000.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/grid/tt_bvwxxkk_000.png'><img src='img/grid/tt_bvwxxkk_000.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/grid/tt_heggapy_000.png'><img src='img/grid/tt_heggapy_000.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/grid/tt_hhlxbor_000.png'><img src='img/grid/tt_hhlxbor_000.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/grid/tt_ioskrup_000.png'><img src='img/grid/tt_ioskrup_000.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/grid/tt_ioskrup_001.png'><img src='img/grid/tt_ioskrup_001.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/grid/tt_ioznacc_000.png'><img src='img/grid/tt_ioznacc_000.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/grid/tt_ioznacc_001.png'><img src='img/grid/tt_ioznacc_001.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/grid/tt_jluyzzr_000.png'><img src='img/grid/tt_jluyzzr_000.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/grid/tt_jluyzzr_001.png'><img src='img/grid/tt_jluyzzr_001.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/grid/tt_jluyzzr_002.png'><img src='img/grid/tt_jluyzzr_002.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/grid/tt_jluyzzr_003.png'><img src='img/grid/tt_jluyzzr_003.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/grid/tt_jluyzzr_004.png'><img src='img/grid/tt_jluyzzr_004.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/grid/tt_jluyzzr_005.png'><img src='img/grid/tt_jluyzzr_005.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/grid/tt_jrhobyd_001.png'><img src='img/grid/tt_jrhobyd_001.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/grid/tt_jwxokov_000.png'><img src='img/grid/tt_jwxokov_000.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/grid/tt_ljswgua_000.png'><img src='img/grid/tt_ljswgua_000.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/grid/tt_mtfwhqu_000.png'><img src='img/grid/tt_mtfwhqu_000.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/grid/tt_njszzwx_000.png'><img src='img/grid/tt_njszzwx_000.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/grid/tt_nrpwqan_000.png'><img src='img/grid/tt_nrpwqan_000.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/grid/tt_oykffub_000.png'><img src='img/grid/tt_oykffub_000.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/grid/tt_sagfirr_000.png'><img src='img/grid/tt_sagfirr_000.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/grid/tt_tnlwlln_000.png'><img src='img/grid/tt_tnlwlln_000.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/grid/tt_uusbaeq_000.png'><img src='img/grid/tt_uusbaeq_000.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/grid/tt_vcxbjcq_000.png'><img src='img/grid/tt_vcxbjcq_000.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/grid/tt_yfegbqp_000.png'><img src='img/grid/tt_yfegbqp_000.png' width='300' class='hm' /></a></div></div>
+</div>
+<div class='container' id ='terrain'><br /><br /><br /><span class='h2'>Terrain</span> <a href='#top'>Up</a><br /><br /><br />
+<div class='desc'></div><div class='pic'><div class='picc'><a href='img/terrain/cx2_tt_zqpzlny_001.png'><img src='img/terrain/cx2_tt_zqpzlny_001.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/terrain/gli1.png'><img src='img/terrain/gli1.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/terrain/gsim_egxqqsm_000.png'><img src='img/terrain/gsim_egxqqsm_000.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/terrain/gsim_jppxh_002.png'><img src='img/terrain/gsim_jppxh_002.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/terrain/gsim_lgvivru_000.png'><img src='img/terrain/gsim_lgvivru_000.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/terrain/gsim_mffakwv_000.png'><img src='img/terrain/gsim_mffakwv_000.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/terrain/gsim_mlftkem_001.png'><img src='img/terrain/gsim_mlftkem_001.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/terrain/gsim_qxupbuv_000.png'><img src='img/terrain/gsim_qxupbuv_000.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/terrain/gsim_tqobudo_000.png'><img src='img/terrain/gsim_tqobudo_000.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/terrain/gstt_meteorit_02.png'><img src='img/terrain/gstt_meteorit_02.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/terrain/h2.png'><img src='img/terrain/h2.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/terrain/h3.png'><img src='img/terrain/h3.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/terrain/h4.png'><img src='img/terrain/h4.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/terrain/hb0.png'><img src='img/terrain/hb0.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/terrain/hb1.png'><img src='img/terrain/hb1.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/terrain/hb10.png'><img src='img/terrain/hb10.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/terrain/hb2.png'><img src='img/terrain/hb2.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/terrain/hb3.png'><img src='img/terrain/hb3.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/terrain/hb9.png'><img src='img/terrain/hb9.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/terrain/nw_daftkai_000.png'><img src='img/terrain/nw_daftkai_000.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/terrain/nw_daftkai_001.png'><img src='img/terrain/nw_daftkai_001.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/terrain/nw_daftkai_002.png'><img src='img/terrain/nw_daftkai_002.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/terrain/nw_daftkai_003.png'><img src='img/terrain/nw_daftkai_003.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/terrain/nw_ylcvwnm_000.png'><img src='img/terrain/nw_ylcvwnm_000.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/terrain/nw_yvxaymi_000.png'><img src='img/terrain/nw_yvxaymi_000.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/terrain/nw_zwpritw_000.png'><img src='img/terrain/nw_zwpritw_000.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/terrain/sea0.png'><img src='img/terrain/sea0.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/terrain/sea1.png'><img src='img/terrain/sea1.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/terrain/sea2.png'><img src='img/terrain/sea2.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/terrain/sea3.png'><img src='img/terrain/sea3.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/terrain/sea4.png'><img src='img/terrain/sea4.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/terrain/sea5.png'><img src='img/terrain/sea5.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/terrain/sea6.png'><img src='img/terrain/sea6.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/terrain/sea9.png'><img src='img/terrain/sea9.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/terrain/smr1.png'><img src='img/terrain/smr1.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/terrain/surf0.png'><img src='img/terrain/surf0.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/terrain/surf1.png'><img src='img/terrain/surf1.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/terrain/talus0.png'><img src='img/terrain/talus0.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/terrain/tt_bfozsmv_000.png'><img src='img/terrain/tt_bfozsmv_000.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/terrain/tt_daedreh_000.png'><img src='img/terrain/tt_daedreh_000.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/terrain/tt_daedreh_001.png'><img src='img/terrain/tt_daedreh_001.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/terrain/tt_gevxbyz_000.png'><img src='img/terrain/tt_gevxbyz_000.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/terrain/tt_giiaagc_000.png'><img src='img/terrain/tt_giiaagc_000.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/terrain/tt_hfybjcb_000.png'><img src='img/terrain/tt_hfybjcb_000.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/terrain/tt_oiglumh_000.png'><img src='img/terrain/tt_oiglumh_000.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/terrain/tt_wfyghyh_000.png'><img src='img/terrain/tt_wfyghyh_000.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/terrain/tt_xvxeznl_000.png'><img src='img/terrain/tt_xvxeznl_000.png' width='300' class='hm' /></a></div></div>
+</div>
+<div class='container' id ='planets'><br /><br /><br /><span class='h2'>Planets</span> <a href='#top'>Up</a><br /><br /><br />
+<div class='desc'></div><div class='pic'><div class='picc'><a href='img/planets/cliffs_ceouimn_000.png'><img src='img/planets/cliffs_ceouimn_000.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/planets/cliffs_dlkdyqi_000.png'><img src='img/planets/cliffs_dlkdyqi_000.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/planets/cliffs_dlkdyqi_001.png'><img src='img/planets/cliffs_dlkdyqi_001.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/planets/cliffs_hycvxid_000.png'><img src='img/planets/cliffs_hycvxid_000.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/planets/cliffs_jwqmvyd_000.png'><img src='img/planets/cliffs_jwqmvyd_000.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/planets/cliffs_jwqmvyd_001.png'><img src='img/planets/cliffs_jwqmvyd_001.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/planets/cliffs_jwqmvyd_003.png'><img src='img/planets/cliffs_jwqmvyd_003.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/planets/cliffs_njmxmcl_000.png'><img src='img/planets/cliffs_njmxmcl_000.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/planets/cliffs_njmxmcl_001.png'><img src='img/planets/cliffs_njmxmcl_001.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/planets/cliffs_solaqra_001.png'><img src='img/planets/cliffs_solaqra_001.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/planets/cliffs_sxnmqjy_000.png'><img src='img/planets/cliffs_sxnmqjy_000.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/planets/cliffs_ultvaix_000.png'><img src='img/planets/cliffs_ultvaix_000.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/planets/cliffs_yvmavul_001.png'><img src='img/planets/cliffs_yvmavul_001.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/planets/cliffs_zznjqpr_000.png'><img src='img/planets/cliffs_zznjqpr_000.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/planets/cliffs_zznjqpr_001.png'><img src='img/planets/cliffs_zznjqpr_001.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/planets/nw_ffedecx_000.png'><img src='img/planets/nw_ffedecx_000.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/planets/nw_ffedecx_001.png'><img src='img/planets/nw_ffedecx_001.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/planets/nw_fwqvwok_000.png'><img src='img/planets/nw_fwqvwok_000.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/planets/nw_jtodptk_001.png'><img src='img/planets/nw_jtodptk_001.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/planets/nw_oeqsreg_000.png'><img src='img/planets/nw_oeqsreg_000.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/planets/nw_ofaecwu_000.png'><img src='img/planets/nw_ofaecwu_000.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/planets/nw_ofaecwu_001.png'><img src='img/planets/nw_ofaecwu_001.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/planets/nw_uugwarl_000.png'><img src='img/planets/nw_uugwarl_000.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/planets/nw_yhhbozf_000.png'><img src='img/planets/nw_yhhbozf_000.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/planets/planets_fhrdrzp_000.png'><img src='img/planets/planets_fhrdrzp_000.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/planets/planets_tlstzgu_000.png'><img src='img/planets/planets_tlstzgu_000.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/planets/planets_tlstzgu_002.png'><img src='img/planets/planets_tlstzgu_002.png' width='300' class='hm' /></a></div></div>
+</div>
+<div class='container' id ='newworld'><br /><br /><br /><span class='h2'>Game skeleton</span> <a href='#top'>Up</a><br /><br /><br />
+<div class='desc'></div><div class='pic'><div class='picc'><a href='img/newworld/nw-00.png'><img src='img/newworld/nw-00.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/newworld/nw-01.png'><img src='img/newworld/nw-01.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/newworld/nw-02-a.png'><img src='img/newworld/nw-02-a.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/newworld/nw-02-b.png'><img src='img/newworld/nw-02-b.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/newworld/nw-02-c.png'><img src='img/newworld/nw-02-c.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/newworld/nw-fish-01.png'><img src='img/newworld/nw-fish-01.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/newworld/nw-point-fish-02.png'><img src='img/newworld/nw-point-fish-02.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/newworld/nw-point-fish-03.png'><img src='img/newworld/nw-point-fish-03.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/newworld/nw_tvomayq_000.png'><img src='img/newworld/nw_tvomayq_000.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/newworld/nw_vzabmwj_000.png'><img src='img/newworld/nw_vzabmwj_000.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/newworld/nwg01_a.png'><img src='img/newworld/nwg01_a.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/newworld/nwg01_b.png'><img src='img/newworld/nwg01_b.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/newworld/nwg02_c.png'><img src='img/newworld/nwg02_c.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/newworld/nwg02_d.png'><img src='img/newworld/nwg02_d.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/newworld/nwg02_dd.png'><img src='img/newworld/nwg02_dd.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/newworld/nwg02_e.png'><img src='img/newworld/nwg02_e.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/newworld/nwg02_g.png'><img src='img/newworld/nwg02_g.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/newworld/nwg02_i.png'><img src='img/newworld/nwg02_i.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/newworld/nwg02_j.png'><img src='img/newworld/nwg02_j.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/newworld/nwg02_k.png'><img src='img/newworld/nwg02_k.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/newworld/nwg02_l.png'><img src='img/newworld/nwg02_l.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/newworld/nwg02_m.png'><img src='img/newworld/nwg02_m.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/newworld/nwg02_r.png'><img src='img/newworld/nwg02_r.png' width='300' class='hm' /></a></div></div>
+<div class='pic'><div class='picc'><a href='img/newworld/nwg02_s.png'><img src='img/newworld/nwg02_s.png' width='300' class='hm' /></a></div></div>
+</div>
+
+    
+  </body>
+</html>

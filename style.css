@@ -1,0 +1,216 @@
+﻿
+.hidden {
+  display: none;
+}
+
+body#top {
+
+  position: absolute;
+  height:   100%;
+  width:    100%;
+  margin:   0px;
+
+  background-color: rgb(0,0,0);
+  color:            rgb(180,180,180);
+  
+  font-family: Arial, Helvetica, sans-serif;
+  font-size:   14px;
+  /*
+  font-family: Monaco;
+  font-size:   15px;
+  */
+}
+
+body.back {
+  background-image: url('backbl.png');
+}
+
+
+span.h {
+  font-size: 27px;
+  font-weight: bold;
+  padding-top:    15px;
+  padding-bottom: 15px;
+  padding-left:   15px;
+  padding-right:  15px;
+}
+
+span.h2 {
+  font-size: 20px;
+  font-weight: bold;
+  padding-top:    15px;
+  padding-bottom: 15px;
+  padding-left:   15px;
+  padding-right:  15px;
+}
+
+div.desc {
+  padding-top:    15px;
+  padding-bottom: 35px;
+  padding-left:   15px;
+  padding-right:  15px;
+}
+
+.hm {
+  max-height: 300px;
+}
+
+div.outer {
+  display:      table;
+  height:       100%;
+  margin-left:  auto;
+  margin-right: auto;
+  overflow:     visible;
+  position:     static;
+}
+div.middle {
+  display:        table-cell;
+  position:       static;
+  text-align:     center;
+  vertical-align: middle;
+}
+div.inner {
+  background-color: rgb(0,0,0);
+}
+
+div.pic {
+  display: inline-block;
+  overflow: hidden;
+  width:  320px;
+  height: 320px;
+  margin: 5px;
+  background-color: rgb(30,30,30);
+}
+div.picc {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+.readable {
+  /*
+  font-family: "Times New Roman";
+  font-size:   16px;
+  */
+}
+
+
+
+div.header {
+  margin-top:    50px;
+  margin-bottom: 50px;
+  margin-left:   auto;
+  margin-right:  auto;
+  
+  padding-top:    35px;
+  padding-bottom: 30px;
+  padding-left:   15px;
+  padding-right:  15px;
+  
+  text-align:    center;
+  width:         1000px;
+  background-color: rgb(30,30,30);
+}
+
+div.container {
+  margin-top:    80px;
+  margin-bottom: 80px;
+  margin-left:   auto;
+  margin-right:  auto;
+  
+  padding-top:    20px;
+  padding-bottom: 20px;
+  padding-left:   15px;
+  padding-right:  15px;
+  
+  width:          1000px;
+  
+  background-color: rgb(30,30,30);
+}
+
+div.links {
+  padding-left: 50px;
+}
+
+div.top {
+  margin-left:   auto;
+  margin-right:  auto;
+  margin-bottom: 35px;
+
+  padding-top:    15px;
+  padding-bottom: 15px;
+  padding-left:   30px;
+  padding-right:  30px;
+  
+  text-align:    center;
+  width:         940px;
+  background-color: rgb(30,30,30);
+}
+
+div.narrow {
+  margin-top:    35px;
+  margin-bottom: 35px;
+  margin-left:   auto;
+  margin-right:  auto;
+  
+  padding-top:    15px;
+  padding-bottom: 15px;
+  padding-left:   30px;
+  padding-right:  30px;
+  
+  text-align:    center;
+  width:         640px;
+  background-color: rgb(30,30,30);
+}
+
+div.text {
+  position:   relative;
+  text-align: justify;
+  left:       170px;
+  width:      600px;
+}
+
+div.refresh {
+  margin-top:    80px;
+  margin-bottom: 80px;
+  margin-left:   auto;
+  margin-right:  auto;
+  padding:       10px;
+  text-align:    center;
+  
+  
+  width:         340px;
+  background-color: rgb(30,30,30);
+}
+
+table.center {
+  margin-left:  auto;
+  margin-right: auto;
+}
+
+
+table.innertable {
+  width: 100%;
+}
+
+td.textleft {
+  text-align: left;
+}
+td.last {
+  padding-top: 80px;
+}
+
+
+img.link {
+  border: 0px;
+}
+
+a:link    { color: rgb(150,150,150); }
+a:visited { color: rgb(150,150,150); }
+a:hover   {}
+a:active  {}
+
