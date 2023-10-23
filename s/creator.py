@@ -11,7 +11,7 @@ folders = [
            "Fractals created with the above playground. For easier Julia program try: <a href='../julia/julia2.html'>Juila</a>"],
     ["marching", "Marching Cubes",
            "F(x, y, z) = S, Triangulization with marching cubes. Try: \
-            <a href='../webgl-sketches/marching/mc.html'Marching Cubes</a>"],
+            <a href='../webgl-sketches/marching/mc.html'>Marching Cubes</a>"],
     ["midpoints", "Midpoints",
            "Takes a curve a plane, creates unordered pairs of all points in the curve, and new point location is the midpoint, \
             elevation is the distance. <a href='../webgl-sketches/midpoints/gorbincs-felho.html'>Midpoints</a>"],
