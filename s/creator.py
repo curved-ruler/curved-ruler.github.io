@@ -3,12 +3,15 @@ import os
 
 folders = [
     ["objector", "3d objects and perspectives",
-           "Ways of displaying 3D objects in 2D. Axonometry, Perspective, 6 point perspective (or 360° fisheye): (x,y,z)=>(a,b) \
+           "Ways of displaying 3D objects in 2D. Axonometry, Perspective, 6 point perspective (or 360° fisheye): (x,y,z)=>(x2,y2) \
             And there is cyclography, too. Try: <a href='../webgl-sketches/objector/objector.html'>Objector</a>"],
     ["eq", "Equation plotter",
            "Started as an equation plotter, now is a 2d playground. Try: <a href='../webgl-sketches/eq/eq.html'>Eq plotter</a>"],
     ["eq_frac", "Fractals",
            "Fractals created with the above playground. For easier Julia program try: <a href='../julia/julia2.html'>Juila</a>"],
+    ["marching", "Marching Cubes",
+           "F(x, y, z) = S, Triangulization with marching cubes. Try: \
+            <a href='../webgl-sketches/marching/mc.html'Marching Cubes</a>"],
     ["midpoints", "Midpoints",
            "Takes a curve a plane, creates unordered pairs of all points in the curve, and new point location is the midpoint, \
             elevation is the distance. <a href='../webgl-sketches/midpoints/gorbincs-felho.html'>Midpoints</a>"],
