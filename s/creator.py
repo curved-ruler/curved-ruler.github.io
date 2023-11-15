@@ -32,8 +32,8 @@ folders = [
     ["bugs", "Bugs",
            "Bugs following each other. 1st -> 2nd, 2nd -> 3rd ... Nth -> 1st \
             Try: <a href='../webgl-sketches/bugs/bugs.html'>Bugs</a>"],
+    ["pascal", "Pascal / 1d cellular automata", "Try: <a href='../webgl-sketches/pascal/pascal.html'>Pascal</a>"],
     
-    ["pascal", "Pascal / 2d cellular automata", ""],
     ["chaosg", "Modified chaos game", ""],
     ["cycloid", "Cycloid drawing machine", "Based on the cycloid drawing machine by Joe Freedman"],
     ["plane_tr", "Planar transformations", ""],
