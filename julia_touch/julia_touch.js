@@ -226,9 +226,9 @@ let start_pan = function (x, y)
 };
 let pan = function (x, y)
 {
-    let a = scale/cheight;
+    let a = ( scale/cheight ) / window.devicePixelRatio;
     pos.x += (x-pan0.x) * a;
-    pos.y += (pan0.y-y) * a;
+    pos.y += (y-pan0.y) * a;
     pan0.x = x;
     pan0.y = y;
     draw();
