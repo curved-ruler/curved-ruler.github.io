@@ -218,23 +218,29 @@ let draw = function ()
 
 let zoomin  = function () { scale *= 0.8; };
 let zoomout = function () { scale *= 1.25;  };
-let handle_wheel = function (event)
+let setparam = function (x, y)
 {
-    if (event.deltaY < 0) zoomin();
-    else                  zoomout();
-    
+    mouse_pos.x = tr[0] * x + tr[1];
+    mouse_pos.y = tr[2] * (cheight-y) + tr[3];
+    params.textContent = "(" + mouse_pos.x + ", " + mouse_pos.y + ")";
     draw();
 };
 
 let touchstart = function (event)
 {
     event.preventDefault();
-    grabbed = 1;
+    if (mouse_param)
+    {
+        if (event.touches.length === 1)
+        {
+            setparam(event.touches[0].pageX, event.touches[0].pageY);
+        }
+    }
 };
 let touchend = function (event)
 {
     event.preventDefault();
-    grabbed = 0;
+    //grabbed = 0;
 };
 let touchcancel = function (event)
 {
