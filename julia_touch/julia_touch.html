@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>Julia</title>
+        <script src="julia_touch.js"></script>
+        <style>
+#canvas {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+#params {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  font-size: 20px;
+  color: rgb(190, 190, 190);
+  background-color: rgb(0,0,0);
+}
+#freeze {
+  position: absolute;
+  top: 30px;
+  left: 0px;
+  font-size: 20px;
+}
+        </style>
+    </head>
+    <body>
+        <canvas id="canvas"></canvas>
+        <button id="freeze" onclick="freeze()">Freeze</button>
+        <span id="params">asd</span>
+    </body>
+</html>
