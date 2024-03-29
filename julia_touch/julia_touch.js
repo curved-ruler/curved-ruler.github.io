@@ -295,7 +295,16 @@ let init = function ()
 
 let freeze = function ()
 {
-    mouse_param = !mouse_param;
+    if (mouse_param)
+    {
+        mouse_param = false;
+        document.getElementById("freeze").style.background='#009';
+    }
+    else
+    {
+        mouse_param = true;
+        document.getElementById("freeze").style.background='#aaa';
+    }
 };
 window.freeze = freeze;
 
