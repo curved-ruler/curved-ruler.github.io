@@ -228,19 +228,21 @@ let handle_wheel = function (event)
 
 let touchstart = function (event)
 {
+    event.preventDefault();
     grabbed = 1;
 };
 let touchend = function (event)
 {
+    event.preventDefault();
     grabbed = 0;
 };
 let touchcancel = function (event)
 {
-    
+    event.preventDefault();
 };
 let touchmove = function (event)
 {
-    
+    event.preventDefault();
 };
 
 let resize = function ()
