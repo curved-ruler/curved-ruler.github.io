@@ -229,6 +229,8 @@ let pan = function (x, y)
     let a = scale/cheight;
     pos.x += (x-pan0.x) * a;
     pos.y += (pan0.y-y) * a;
+    pan0.x = x;
+    pan0.y = y;
     draw();
 }
 let setparam = function (x, y)
@@ -257,7 +259,6 @@ let touchstart = function (event)
 let touchend = function (event)
 {
     event.preventDefault();
-    //grabbed = 0;
 };
 let touchcancel = function (event)
 {
@@ -316,7 +317,7 @@ let freeze = function ()
     if (mouse_param)
     {
         mouse_param = false;
-        document.getElementById("freeze").style.backgroundColor = '#009';
+        document.getElementById("freeze").style.backgroundColor = '#55c';
     }
     else
     {
