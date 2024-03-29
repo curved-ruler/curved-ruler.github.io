@@ -164,7 +164,7 @@ let canvas = null;
 let params = null;
 let cwidth, cheight;
 
-let pan0      = { x:0.0,  y:0.0 };
+let pan0      = { x:0.0,  y:0.0,  zoom:1.0 };
 let pos       = { x:0.0,  y:0.0 };
 let mouse_pos = { x:0.0,  y:0.0 };
 let mouse_dom = { x:null, y:null };
@@ -217,8 +217,10 @@ let draw = function ()
 
 
 
-let zoomin  = function () { scale *= 0.8; };
-let zoomout = function () { scale *= 1.25;  };
+//let zoomin  = function () { scale *= 0.8; };
+//let zoomout = function () { scale *= 1.25;  };
+let start_zoom = function (z) { pan0.zoom = z; }
+let zoom = function (z) { scale *= z/pan0.zoom; };
 let start_pan = function (x, y)
 {
     pan0.x = x;
@@ -232,7 +234,8 @@ let pan = function (x, y)
     pan0.x = x;
     pan0.y = y;
     draw();
-}
+};
+
 let setparam = function (x, y)
 {
     mouse_pos.x = tr[0] * x + tr[1];
@@ -244,16 +247,27 @@ let setparam = function (x, y)
 let touchstart = function (event)
 {
     event.preventDefault();
-    if (mouse_param)
+    if (event.touches.length === 1)
     {
-        if (event.touches.length === 1)
+        if (mouse_param)
         {
             setparam(event.touches[0].pageX, event.touches[0].pageY);
+            draw();
+        }
+        else
+        {
+            start_pan(event.touches[0].pageX, event.touches[0].pageY);
         }
     }
-    else
+    else if (event.touches.length === 2)
     {
-        start_pan(event.touches[0].pageX, event.touches[0].pageY);
+        if (!mouse_param)
+        {
+            start_zoom(Math.sqrt((event.touches[0].pageX-event.touches[1].pageX) *
+                                 (event.touches[0].pageX-event.touches[1].pageX) +
+                                 (event.touches[0].pageY-event.touches[1].pageY) *
+                                 (event.touches[0].pageY-event.touches[1].pageY)));
+        }
     }
 };
 let touchend = function (event)
@@ -267,7 +281,19 @@ let touchcancel = function (event)
 let touchmove = function (event)
 {
     event.preventDefault();
-    pan(event.touches[0].pageX, event.touches[0].pageY);
+    if (event.touches.length === 1)
+    {
+        pan(event.touches[0].pageX, event.touches[0].pageY);
+        draw();
+    }
+    else if (event.touches.length === 2)
+    {
+        zoom(Math.sqrt((event.touches[0].pageX-event.touches[1].pageX) *
+                                 (event.touches[0].pageX-event.touches[1].pageX) +
+                                 (event.touches[0].pageY-event.touches[1].pageY) *
+                                 (event.touches[0].pageY-event.touches[1].pageY)));
+        draw();
+    }
 };
 
 let resize = function ()
