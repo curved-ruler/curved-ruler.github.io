@@ -164,6 +164,7 @@ let canvas = null;
 let params = null;
 let cwidth, cheight;
 
+let pan0      = { x:0.0,  y:0.0 };
 let pos       = { x:0.0,  y:0.0 };
 let mouse_pos = { x:0.0,  y:0.0 };
 let mouse_dom = { x:null, y:null };
@@ -218,6 +219,18 @@ let draw = function ()
 
 let zoomin  = function () { scale *= 0.8; };
 let zoomout = function () { scale *= 1.25;  };
+let start_pan = function (x, y)
+{
+    pan0.x = x;
+    pan0.y = y;
+};
+let pan = function (x, y)
+{
+    let a = scale/cheight;
+    pos.x += (x-pan0.x) * a;
+    pos.y += (pan0.y-y) * a;
+    draw();
+}
 let setparam = function (x, y)
 {
     mouse_pos.x = tr[0] * x + tr[1];
@@ -236,6 +249,10 @@ let touchstart = function (event)
             setparam(event.touches[0].pageX, event.touches[0].pageY);
         }
     }
+    else
+    {
+        start_pan(event.touches[0].pageX, event.touches[0].pageY);
+    }
 };
 let touchend = function (event)
 {
@@ -249,6 +266,7 @@ let touchcancel = function (event)
 let touchmove = function (event)
 {
     event.preventDefault();
+    pan(event.touches[0].pageX, event.touches[0].pageY);
 };
 
 let resize = function ()
@@ -298,12 +316,12 @@ let freeze = function ()
     if (mouse_param)
     {
         mouse_param = false;
-        document.getElementById("freeze").style.background='#009';
+        document.getElementById("freeze").style.backgroundColor = '#009';
     }
     else
     {
         mouse_param = true;
-        document.getElementById("freeze").style.background='#aaa';
+        document.getElementById("freeze").style.backgroundColor = '#aaa';
     }
 };
 window.freeze = freeze;
