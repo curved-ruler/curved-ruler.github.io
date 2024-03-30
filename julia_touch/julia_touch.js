@@ -228,7 +228,7 @@ let start_pan = function (x, y)
 };
 let pan = function (x, y)
 {
-    let a = ( scale/cheight ) / window.devicePixelRatio;
+    let a = 2.0 * ( scale/cheight ) / window.devicePixelRatio;
     pos.x += (x-pan0.x) * a;
     pos.y += (y-pan0.y) * a;
     pan0.x = x;
