@@ -28,10 +28,13 @@ let tcol  = [1.0, 1.0, 1.0];
 let alpha = 1.0;
 let alpha_dom = null;
 
+let menu_hidden = false;
+
 let obj  = 2;
 let proj = 1;
 let projmat, modlmat, viewmat;
 let scale    = 1;
+let grabbed  = 0;
 
 
 let camh = 1;
@@ -44,6 +47,12 @@ let camera = {
     far   : 1000,
     fovy  : Math.PI / 3,
     aspect: 1,
+    
+    move_k : 0.1,
+    rot_k  : 0.1,
+    
+    move_ws : 0,
+    move_ad : 0,
     
     move_touch : [0, 0],
     look_touch : [0, 0]
@@ -59,6 +68,20 @@ let cam_constrain = function ()
 };
 let cam_move = function ()
 {
+    if (camera.move_ws)
+    {
+        camera.pos[0] += camera.look[0] * camera.move_k*camera.move_ws;
+        camera.pos[1] += camera.look[1] * camera.move_k*camera.move_ws;
+    }
+    
+    if (camera.move_ad)
+    {
+        let d = v3.cross(camera.up, camera.look);
+        d[2] = 0;
+        d = v3.normalize(d);
+        camera.pos = v3.add(camera.pos, v3.cmul(d, camera.move_k*camera.move_ad));
+    }
+    
     let a = camera.move_touch[0]-camera.move_touch[1];
     if (a > 0.01 || a < -0.01)
     {
@@ -302,6 +325,113 @@ let draw = function ()
 };
 
 
+let handle_mouse_down = function (event)
+{
+    grabbed = 1;
+};
+let handle_mouse_up = function (event)
+{
+    grabbed = 0;
+};
+
+let handle_mouse_move = function (event)
+{
+    if (grabbed === 1)
+    {
+        let zi   = [0, 0, 1];
+        let left = v3.cross(camera.up, camera.look);
+        let qx = tr.rot(zi,   -camera.rot_k*event.movementX);
+        let qy = tr.rot(left,  camera.rot_k*event.movementY);
+        
+        let nu = v3.mmul(qy, camera.up);
+        let nl = v3.mmul(qy, camera.look);
+        
+        if (nu[2] > 0.001)
+        {
+            camera.up   = nu;
+            camera.look = nl;
+        }
+        
+        camera.up   = v3.mmul(qx, camera.up);
+        camera.look = v3.mmul(qx, camera.look);
+        
+        cam_constrain();
+    }
+};
+let handle_key_up = function (event)
+{
+    if (event.key === "w" || event.key === "W")
+    {
+        camera.move_ws = 0;
+    }
+    else if (event.key === "s" || event.key === "S")
+    {
+        camera.move_ws = 0;
+    }
+    else if (event.key === "a" || event.key === "A")
+    {
+        camera.move_ad = 0;
+    }
+    else if (event.key === "d" || event.key === "D")
+    {
+        camera.move_ad = 0;
+    }
+};
+let handle_key_down = function (event)
+{
+    if (event.key === "m" || event.key === "M")
+    {
+        if (menu_hidden)
+        {
+            menu_hidden = false;
+            document.getElementById("menu").className = "";
+        }
+        else
+        {
+            menu_hidden = true;
+            document.getElementById("menu").className = "hidden";
+        }
+    }
+    else if (event.key === "i" || event.key === "I")
+    {
+        ++proj;
+        if (proj > 2) { proj = 0; }
+    }
+    else if (event.key === "o" || event.key === "O")
+    {
+        ++obj;
+        if (obj > 2) { obj = 1; }
+    }
+    else if (event.key === "F8")
+    {
+        let image = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");
+        window.location.href=image;
+    }
+    
+    else if (event.key === "f" || event.key === "F")
+    {
+        funk = !funk;
+        make_planet();
+    }
+    
+    
+    else if (event.key === "w" || event.key === "W")
+    {
+        camera.move_ws = 1;
+    }
+    else if (event.key === "s" || event.key === "S")
+    {
+        camera.move_ws = -1;
+    }
+    else if (event.key === "a" || event.key === "A")
+    {
+        camera.move_ad = 1;
+    }
+    else if (event.key === "d" || event.key === "D")
+    {
+        camera.move_ad = -1;
+    }
+};
 
 let touchstart = function (event)
 {
@@ -383,6 +513,10 @@ let init = function ()
     canvas = document.getElementById('canvas');
     gpu_init('canvas');
     
+    canvas.addEventListener("mousedown", handle_mouse_down);
+    canvas.addEventListener("mouseup",   handle_mouse_up);
+    canvas.addEventListener("mousemove", handle_mouse_move);
+    
     canvas.addEventListener("touchstart",  touchstart);
     canvas.addEventListener("touchend",    touchend);
     canvas.addEventListener("touchcancel", touchcancel);
@@ -401,11 +535,7 @@ let init = function ()
 };
 
 
-
 window.set_alpha = set_alpha;
-window.proj_toggle = function () { ++proj; if (proj > 2) { proj = 1; } };
-window.obj_toggle  = function () { ++obj;  if (obj  > 2) { obj  = 1; } };
-window.funk_toggle = function () { funk = !funk; make_planet(); };
 
 document.addEventListener("DOMContentLoaded", init);
 document.addEventListener("keydown", handle_key_down);
