@@ -536,6 +536,9 @@ let init = function ()
 
 
 window.set_alpha = set_alpha;
+window.proj_toggle = function () { ++proj; if (proj > 2) { proj = 1; } };
+window.obj_toggle  = function () { ++obj; if (obj > 2) { obj = 1; } };
+window.funk_toggle = function () { funk = !funk; make_planet(); };
 
 document.addEventListener("DOMContentLoaded", init);
 document.addEventListener("keydown", handle_key_down);

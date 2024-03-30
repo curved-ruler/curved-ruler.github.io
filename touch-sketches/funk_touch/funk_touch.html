@@ -17,7 +17,7 @@
   left: 10px;
   font-size: 60px;
 }
-button {
+button, select {
   font-size: 60px;
 }
         </style>
@@ -26,9 +26,13 @@ button {
         <canvas id="canvas"></canvas>
         
         <div id="menu">
+            &nbsp;&nbsp;
             <button onclick="proj_toggle()"> I </button>
+            &nbsp;&nbsp;
             <button onclick="obj_toggle()">  O </button>
+            &nbsp;&nbsp;
             <button onclick="funk_toggle()"> F </button>
+            &nbsp;&nbsp;
                     Alpha:
                     <select id="alpha" onchange="set_alpha(this.value)">
                         <option value="0.03">0.03</option>
