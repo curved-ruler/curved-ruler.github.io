@@ -220,7 +220,7 @@ let draw = function ()
 //let zoomin  = function () { scale *= 0.8; };
 //let zoomout = function () { scale *= 1.25;  };
 let start_zoom = function (z) { pan0.zoom = z; }
-let zoom = function (z) { scale *= z/pan0.zoom; pan0.zoom = z; };
+let zoom = function (z) { scale /= z/pan0.zoom; pan0.zoom = z; };
 let start_pan = function (x, y)
 {
     pan0.x = x;
