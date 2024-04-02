@@ -233,7 +233,7 @@ let pan = function (x, y)
     pos.y += (y-pan0.y) * a;
     pan0.x = x;
     pan0.y = y;
-    draw();
+    //draw();
 };
 
 let setparam = function (x, y)
@@ -241,7 +241,7 @@ let setparam = function (x, y)
     mouse_pos.x = tr[0] * x + tr[1];
     mouse_pos.y = tr[2] * (cheight-y) + tr[3];
     params.textContent = "(" + mouse_pos.x + ", " + mouse_pos.y + ")";
-    draw();
+    //draw();
 };
 
 let touchstart = function (event)
@@ -252,7 +252,7 @@ let touchstart = function (event)
         if (mouse_param)
         {
             setparam(event.touches[0].pageX, event.touches[0].pageY);
-            draw();
+            //draw();
         }
         else
         {
@@ -286,7 +286,7 @@ let touchmove = function (event)
         if (event.touches.length === 1)
         {
             pan(event.touches[0].pageX, event.touches[0].pageY);
-            draw();
+            //draw();
         }
         else if (event.touches.length === 2)
         {
@@ -294,7 +294,7 @@ let touchmove = function (event)
                            (event.touches[0].pageX-event.touches[1].pageX) +
                            (event.touches[0].pageY-event.touches[1].pageY) *
                            (event.touches[0].pageY-event.touches[1].pageY)));
-            draw();
+            //draw();
         }
     }
     else
@@ -302,9 +302,15 @@ let touchmove = function (event)
         if (event.touches.length === 1)
         {
             setparam(event.touches[0].pageX, event.touches[0].pageY);
-            draw();
+            //draw();
         }
     }
+};
+
+let tick = function (timestamp)
+{
+    draw();
+    window.requestAnimationFrame(tick);
 };
 
 let resize = function ()
@@ -344,7 +350,8 @@ let init = function ()
     resize();
     make_quad();
     create_shader();
-    draw();
+    
+    window.requestAnimationFrame(tick);
 };
 
 
