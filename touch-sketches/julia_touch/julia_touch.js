@@ -283,21 +283,27 @@ let touchmove = function (event)
     event.preventDefault();
     if (!mouse_param)
     {
-    
-    if (event.touches.length === 1)
-    {
-        pan(event.touches[0].pageX, event.touches[0].pageY);
-        draw();
+        if (event.touches.length === 1)
+        {
+            pan(event.touches[0].pageX, event.touches[0].pageY);
+            draw();
+        }
+        else if (event.touches.length === 2)
+        {
+            zoom(Math.sqrt((event.touches[0].pageX-event.touches[1].pageX) *
+                           (event.touches[0].pageX-event.touches[1].pageX) +
+                           (event.touches[0].pageY-event.touches[1].pageY) *
+                           (event.touches[0].pageY-event.touches[1].pageY)));
+            draw();
+        }
     }
-    else if (event.touches.length === 2)
+    else
     {
-        zoom(Math.sqrt((event.touches[0].pageX-event.touches[1].pageX) *
-                       (event.touches[0].pageX-event.touches[1].pageX) +
-                       (event.touches[0].pageY-event.touches[1].pageY) *
-                       (event.touches[0].pageY-event.touches[1].pageY)));
-        draw();
-    }
-    
+        if (event.touches.length === 1)
+        {
+            setparam(event.touches[0].pageX, event.touches[0].pageY);
+            draw();
+        }
     }
 };
 
