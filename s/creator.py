@@ -55,13 +55,20 @@ pics = []
 
 for f in folders :
     list = os.listdir("img/" + f[0])
+    if not os.path.exists("img-smalls/" + f[0]) :
+       os.makedirs("img-smalls/" + f[0])
     list.sort()
     for i in range(len(list)) :
         list[i] = f[0] + "/" + list[i]
     pics.append(list)
 
+
+
 index_str = open("s_base.html", "r").read()
 repl_str = ""
+imgsmall_commands = ""
+
+
 
 repl_str += "<div class='container'><br /><br /><span class='h2'>ToC</span><br /><br /><div class='links'>\n"
 for f in folders :
@@ -74,9 +81,13 @@ for i in range(len(pics)) :
     repl_str += " <a href='#top'>Up</a><br /><br /><br />\n"
     repl_str += "<div class='desc'>" + folders[i][2] + "</div>";
     for p in pics[i] :
-        repl_str += "<div class='pic'><div class='picc'><a href='img/" + p + "'><img src='img/" + p + "' width='300' class='hm' /></a></div></div>\n"
+        imgsmall_commands += "./img-resize img/" + p + " img-smalls/" + p + "\n"
+        repl_str += "<div class='pic'><div class='picc'><a href='img/" + p + "'><img src='img/" + p + "' width='180' class='hm' /></a></div></div>\n"
     repl_str += "</div>\n"
 
 index_f = open("s.html", "w")
 index_f.write(index_str.replace("$$$$", repl_str))
+index_f.close()
+index_f = open("imgsm.sh", "w")
+index_f.write(imgsmall_commands)
 index_f.close()

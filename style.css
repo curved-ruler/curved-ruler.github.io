@@ -85,8 +85,8 @@ div.inner {
 div.pic {
   display: inline-block;
   overflow: hidden;
-  width:  320px;
-  height: 320px;
+  width:  185px;
+  height: 185px;
   margin: 5px;
   background-color: rgb(30,30,30);
 }
