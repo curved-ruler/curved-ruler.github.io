@@ -82,12 +82,12 @@ for i in range(len(pics)) :
     repl_str += "<div class='desc'>" + folders[i][2] + "</div>";
     for p in pics[i] :
         imgsmall_commands += "./img-resize img/" + p + " img-smalls/" + p + "\n"
-        repl_str += "<div class='pic'><div class='picc'><a href='img/" + p + "'><img src='img/" + p + "' width='180' class='hm' /></a></div></div>\n"
+        repl_str += "<div class='pic'><div class='picc'><a href='img/" + p + "'><img src='img-smalls/" + p + "' width='180' class='hm' /></a></div></div>\n"
     repl_str += "</div>\n"
 
 index_f = open("s.html", "w")
 index_f.write(index_str.replace("$$$$", repl_str))
 index_f.close()
-index_f = open("imgsm.sh", "w")
+index_f = open("bulk-resize.sh", "w")
 index_f.write(imgsmall_commands)
 index_f.close()
