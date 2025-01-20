@@ -3,6 +3,10 @@ import { cconv } from "./color-conv.js"
 
 let rgb     = [0,0,0];
 
+let c0r = null;
+let c0g = null;
+let c0b = null;
+
 let rgb0 = null;
 let hsv1 = null;
 let rgb2 = null;
@@ -10,6 +14,8 @@ let hsv3 = null;
 let hsl4 = null;
 let hsv5 = null;
 let rgb6 = null;
+let hex7 = null;
+let rgb8 = null;
 
 let rgb0c = null;
 let hsv1c = null;
@@ -18,6 +24,8 @@ let hsv3c = null;
 let hsl4c = null;
 let hsv5c = null;
 let rgb6c = null;
+let hex7c = null;
+let rgb8c = null;
 
 let tostring = function (vec)
 {
@@ -91,25 +99,40 @@ let compute = function ()
     
     //console.log("HEX", cconv.hex2rgb("#abc"));
 };
+
+let grad = function ()
+{
+    let rgbr = cconv.readable(rgb, 255,255,255);
+    c0r.style.background = `linear-gradient(to right, rgb(${0} ${rgbr[1]} ${rgbr[2]}), rgb(${255} ${rgbr[1]} ${rgbr[2]}))`;
+    c0g.style.background = `linear-gradient(to right, rgb(${rgbr[0]} ${0} ${rgbr[2]}), rgb(${rgbr[0]} ${255} ${rgbr[2]}))`;
+    c0b.style.background = `linear-gradient(to right, rgb(${rgbr[0]} ${rgbr[1]} ${0}), rgb(${rgbr[0]} ${rgbr[1]} ${255}))`;
+};
 let set_r = function (rstr)
 {
     rgb[0] = parseFloat(rstr) / 255;
+    grad();
     compute();
 };
 let set_g = function (gstr)
 {
     rgb[1] = parseFloat(gstr) / 255;
+    grad();
     compute();
 };
 let set_b = function (bstr)
 {
     rgb[2] = parseFloat(bstr) / 255;
+    grad();
     compute();
 };
 
 let init = function ()
 {
     document.removeEventListener("DOMContentLoaded", init);
+    
+    c0r = document.getElementById("c0r");
+    c0g = document.getElementById("c0g");
+    c0b = document.getElementById("c0b");
     
     rgb0 = document.getElementById("rgb0");
     hsv1 = document.getElementById("hsv1");
@@ -131,6 +154,7 @@ let init = function ()
     hex7c = document.getElementById("hex7c");
     rgb8c = document.getElementById("rgb8c");
     
+    grad();
     compute();
 };
 
