@@ -19,37 +19,77 @@ let hsl4c = null;
 let hsv5c = null;
 let rgb6c = null;
 
+let tostring = function (vec)
+{
+    let ret = "";
+    
+    if (vec[0] < 100) ret += " ";
+    if (vec[0] < 10)  ret += " ";
+    ret += vec[0] + ", ";
+    
+    if (vec[1] < 100) ret += " ";
+    if (vec[1] < 10)  ret += " ";
+    ret += vec[1] + ", ";
+    
+    if (vec[2] < 100) ret += " ";
+    if (vec[2] < 10)  ret += " ";
+    ret += vec[2];
+    
+    return ret;
+};
+
 let compute = function ()
 {
-    rgb0.innerHTML = "" + rgb[0]*255 + ", " + rgb[1]*255 + ", " + rgb[2]*255;
-    rgb0c.style.backgroundColor = `rgb(${rgb[0]*255} ${rgb[1]*255} ${rgb[2]*255})`;
+    let rgbr = cconv.readable(rgb, 255,255,255);
+    rgb0.innerHTML = tostring(rgbr);
+    rgb0c.style.backgroundColor = `rgb(${rgbr[0]} ${rgbr[1]} ${rgbr[2]})`;
     
     let hsv1v = cconv.rgb2hsv(rgb);
-    hsv1.innerHTML = "" + Math.floor(hsv1v[0]*360) + ", " + Math.floor(hsv1v[1]*100) + ", " + Math.floor(hsv1v[2]*100);
+    let hsv1r = cconv.readable(hsv1v, 360,100,100);
+    hsv1.innerHTML = tostring(hsv1r);
     let hsl1v = cconv.hsv2hsl(hsv1v);
-    hsv1c.style.backgroundColor = `hsl(${Math.floor(hsl1v[0]*360)} ${Math.floor(hsl1v[1]*100)}% ${Math.floor(hsl1v[2]*100)}%)`;
+    let hsl1r = cconv.readable(hsl1v, 360,100,100);
+    hsv1c.style.backgroundColor = `hsl(${hsl1r[0]} ${hsl1r[1]}% ${hsl1r[2]}%)`;
     
     let rgb2v = cconv.hsv2rgb(hsv1v);
-    rgb2.innerHTML = "" + Math.floor(rgb2v[0]*255) + ", " + Math.floor(rgb2v[1]*255) + ", " + Math.floor(rgb2v[2]*255);
-    rgb2c.style.backgroundColor = `rgb(${Math.floor(rgb2v[0]*255)} ${Math.floor(rgb2v[1]*255)} ${Math.floor(rgb2v[2]*255)})`;
+    let rgb2r = cconv.readable(rgb2v, 255,255,255);
+    rgb2.innerHTML = tostring(rgb2r);
+    rgb2c.style.backgroundColor = `rgb(${rgb2r[0]} ${rgb2r[1]} ${rgb2r[2]})`;
     
     let hsv3v = cconv.rgb2hsv(rgb2v);
-    hsv3.innerHTML = "" + Math.floor(hsv3v[0]*360) + ", " + Math.floor(hsv3v[1]*100) + ", " + Math.floor(hsv3v[2]*100);
+    let hsv3r = cconv.readable(hsv3v, 360,100,100);
+    hsv3.innerHTML = tostring(hsv3r);
     let hsl3v = cconv.hsv2hsl(hsv3v);
-    hsv3c.style.backgroundColor = `hsl(${Math.floor(hsl3v[0]*360)} ${Math.floor(hsl3v[1]*100)}% ${Math.floor(hsl3v[2]*100)}%)`;
+    let hsl3r = cconv.readable(hsl3v, 360,100,100);
+    hsv3c.style.backgroundColor = `hsl(${hsl3r[0]} ${hsl3r[1]}% ${hsl3r[2]}%)`;
     
     let hsl4v = cconv.hsv2hsl(hsv3v);
-    hsl4.innerHTML = "" + Math.floor(hsl4v[0]*360) + ", " + Math.floor(hsl4v[1]*100) + ", " + Math.floor(hsl4v[2]*100);
-    hsl4c.style.backgroundColor = `hsl(${Math.floor(hsl4v[0]*360)} ${Math.floor(hsl4v[1]*100)}% ${Math.floor(hsl4v[2]*100)}%)`;
+    let hsl4r = cconv.readable(hsl4v, 360,100,100);
+    hsl4.innerHTML = tostring(hsl4r);
+    hsl4c.style.backgroundColor = `hsl(${hsl4r[0]} ${hsl4r[1]}% ${hsl4r[2]}%)`;
     
     let hsv5v = cconv.hsl2hsv(hsl4v);
-    hsv5.innerHTML = "" + Math.floor(hsv5v[0]*360) + ", " + Math.floor(hsv5v[1]*100) + ", " + Math.floor(hsv5v[2]*100);
+    let hsv5r = cconv.readable(hsv5v, 360,100,100);
+    hsv5.innerHTML = tostring(hsv5r);
     let hsl5v = cconv.hsv2hsl(hsv5v);
-    hsv5c.style.backgroundColor = `hsl(${Math.floor(hsl5v[0]*360)} ${Math.floor(hsl5v[1]*100)}% ${Math.floor(hsl5v[2]*100)}%)`;
+    let hsl5r = cconv.readable(hsl5v, 360,100,100);
+    hsv5c.style.backgroundColor = `hsl(${hsl5r[0]} ${hsl5r[1]}% ${hsl5r[2]}%)`;
     
     let rgb6v = cconv.hsv2rgb(hsv5v);
-    rgb6.innerHTML = "" + Math.floor(rgb6v[0]*255) + ", " + Math.floor(rgb6v[1]*255) + ", " + Math.floor(rgb6v[2]*255);
-    rgb6c.style.backgroundColor = `rgb(${Math.floor(rgb6v[0]*255)} ${Math.floor(rgb6v[1]*255)} ${Math.floor(rgb6v[2]*255)})`;
+    let rgb6r = cconv.readable(rgb6v, 255,255,255);
+    rgb6.innerHTML = tostring(rgb6r);
+    rgb6c.style.backgroundColor = `rgb(${rgb6r[0]} ${rgb6r[1]} ${rgb6r[2]})`;
+    
+    let hex7v = cconv.rgb2hex(rgb6v);
+    hex7.innerHTML = hex7v;
+    hex7c.style.backgroundColor = hex7v;
+    
+    let rgb8v = cconv.hex2rgb(hex7v);
+    let rgb8r = cconv.readable(rgb8v, 255,255,255);
+    rgb8.innerHTML = tostring(rgb8r);
+    rgb8c.style.backgroundColor = `rgb(${rgb8r[0]} ${rgb8r[1]} ${rgb8r[2]})`;
+    
+    //console.log("HEX", cconv.hex2rgb("#abc"));
 };
 let set_r = function (rstr)
 {
@@ -78,6 +118,8 @@ let init = function ()
     hsl4 = document.getElementById("hsl4");
     hsv5 = document.getElementById("hsv5");
     rgb6 = document.getElementById("rgb6");
+    hex7 = document.getElementById("hex7");
+    rgb8 = document.getElementById("rgb8");
     
     rgb0c = document.getElementById("rgb0c");
     hsv1c = document.getElementById("hsv1c");
@@ -86,6 +128,8 @@ let init = function ()
     hsl4c = document.getElementById("hsl4c");
     hsv5c = document.getElementById("hsv5c");
     rgb6c = document.getElementById("rgb6c");
+    hex7c = document.getElementById("hex7c");
+    rgb8c = document.getElementById("rgb8c");
     
     compute();
 };

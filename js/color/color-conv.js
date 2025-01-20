@@ -1,4 +1,39 @@
 
+let readable = function (vec, x, y, z)
+{
+    return [Math.floor(vec[0]*x), Math.floor(vec[1]*y), Math.floor(vec[2]*z)];
+};
+
+let rgb2hex = function (rgb)
+{
+    let to_hex = (c) => {
+        var hex = c.toString(16);
+        return hex.length == 1 ? "0" + hex : hex;
+    };
+    return "#" + to_hex(Math.floor(rgb[0]*255)) + to_hex(Math.floor(rgb[1]*255)) + to_hex(Math.floor(rgb[2]*255));
+};
+
+let hex2rgb = function (hex)
+{
+    let a,b,c;
+    if (hex.length == 4)
+    {
+        a = hex.substr(1,1) + hex.substr(1,1);
+        b = hex.substr(2,1) + hex.substr(2,1);
+        c = hex.substr(3,1) + hex.substr(3,1);
+    }
+    else if (hex.length == 7)
+    {
+        a = hex.substr(1,2);
+        b = hex.substr(3,2);
+        c = hex.substr(5,2);
+    }
+    
+    return [parseInt(a,16) / 255,
+            parseInt(b,16) / 255,
+            parseInt(c,16) / 255];
+};
+
 let hsv2hsl = function (hsv)
 {
     let h = hsv[0];
@@ -70,6 +105,9 @@ let hsv2rgb = function (hsv)
 };
 
 let cconv = {
+    readable,
+    rgb2hex,
+    hex2rgb,
     hsv2hsl,
     hsl2hsv,
     hsv2rgb,
